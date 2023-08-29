@@ -89,7 +89,7 @@ package() {
   local _make_opts=(PS2SDKDATADIR="/usr/share/${_platform}${_base}"
                     DESTDIR="${pkgdir}")
 
-  cd "${srcdir}/${pkgname}/"
+  cd "${srcdir}/${pkgname}"
   make "${_make_opts[@]}" -C "${_pkg}" install
   cd "${pkgdir}/usr"
   mv "ports" "${_ee}"
